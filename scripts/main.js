@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let playing = false;
 
     card.addEventListener('mouseenter', () => {
-      if (!playing) video.play().catch(() => {});
+      if (!playing) video.play().catch(() => { });
     });
     card.addEventListener('mouseleave', () => {
       if (!playing) { video.pause(); video.currentTime = 0; }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
           playing = false;
           playBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
         } else {
-          video.play().catch(() => {});
+          video.play().catch(() => { });
           playing = true;
           video.controls = true;
           playBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
@@ -76,6 +76,38 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  /* ===== FEATURED VIDEO ===== */
+  const featuredVideo = document.getElementById('featuredVideo');
+  const featuredPlay = document.getElementById('featuredPlay');
+
+  if (featuredVideo && featuredPlay) {
+    let fPlaying = false;
+
+    // Auto-play on hover
+    const featCard = document.querySelector('.project-featured');
+    featCard.addEventListener('mouseenter', () => {
+      if (!fPlaying) featuredVideo.play().catch(() => { });
+    });
+    featCard.addEventListener('mouseleave', () => {
+      if (!fPlaying) { featuredVideo.pause(); featuredVideo.currentTime = 0; }
+    });
+
+    featuredPlay.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (fPlaying) {
+        featuredVideo.pause();
+        fPlaying = false;
+        featuredPlay.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span>Přehrát film</span>';
+        featuredVideo.controls = false;
+      } else {
+        featuredVideo.play().catch(() => { });
+        fPlaying = true;
+        featuredVideo.controls = true;
+        featuredPlay.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg><span>Pauza</span>';
+      }
+    });
+  }
 
   /* ===== GALLERY SLIDER ===== */
   const slider = document.getElementById('gallerySlider');

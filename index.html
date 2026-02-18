@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samuel Moravec – 3D Animator & Director</title>
-  <meta name="description" content="Portfolio Samuela Moravce – 3D animátor, kameraman, střihač a režisér animovaných filmů. Pracuje v Blenderu, Premiere Pro a DaVinci Resolve." />
+  <meta name="description"
+    content="Portfolio Samuela Moravce – 3D animátor, kameraman, střihač a režisér animovaných filmů. Pracuje v Blenderu, Premiere Pro a DaVinci Resolve." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
+
 <body>
 
   <!-- ===== NAVIGATION ===== -->
@@ -70,81 +75,81 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Projekty</h2>
-        <p class="section-sub">Výběr z mé tvorby – od bakalářského filmu po osobní experimenty.</p>
+        <p class="section-sub">Animované filmy, 3D scény a střih – každý projekt je příběh.</p>
       </div>
 
-      <!-- Filter tabs -->
-      <div class="filter-tabs" id="filterTabs">
-        <button class="filter-tab active" data-filter="all">Vše</button>
-        <button class="filter-tab" data-filter="film">Film</button>
-        <button class="filter-tab" data-filter="camera">Kamera &amp; Světlo</button>
-        <button class="filter-tab" data-filter="edit">Střih</button>
-      </div>
-
-      <!-- Projects grid -->
-      <div class="projects-grid" id="projectsGrid">
-
-        <!-- Project: Forbidden Knowledge -->
-        <article class="project-card" data-category="film edit" id="proj-forbidden">
-          <div class="project-card__media">
-            <video class="project-card__video" poster="assets/screenshots/ss1.png" preload="none" muted loop playsinline>
-              <source src="assets/videos/forbidden-knowledge.mp4" type="video/mp4" />
-            </video>
-            <div class="project-card__overlay">
-              <button class="project-card__play" aria-label="Přehrát">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </button>
-            </div>
+      <!-- FEATURED: Forbidden Knowledge -->
+      <article class="project-featured" id="proj-forbidden">
+        <div class="project-featured__media">
+          <video class="project-featured__video" poster="assets/screenshots/ss1.png" preload="none" muted loop
+            playsinline id="featuredVideo">
+            <source src="assets/videos/forbidden-knowledge.mp4" type="video/mp4" />
+          </video>
+          <div class="project-featured__overlay" id="featuredOverlay">
+            <button class="project-featured__play" id="featuredPlay" aria-label="Přehrát">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              <span>Přehrát film</span>
+            </button>
           </div>
-          <div class="project-card__info">
-            <span class="project-card__tag">Animovaný film · Střih</span>
-            <h3 class="project-card__title">Forbidden Knowledge</h3>
-            <p class="project-card__desc">Krátký animovaný film – extended cut. Práce na kameře, světle, střihu a celkovém vyprávění.</p>
-          </div>
-        </article>
+          <div class="project-featured__badge">Hlavní projekt</div>
+        </div>
+        <div class="project-featured__info">
+          <span class="project-card__tag">Animovaný film · Režie · Střih · 3D Kamera</span>
+          <h3 class="project-featured__title">Forbidden Knowledge</h3>
+          <p class="project-featured__desc">
+            Krátký animovaný film – extended cut. Celý projekt od konceptu po finální střih.
+            Práce na 3D kameře, svícení, pohybu kamery, animaci a celkovém vizuálním vyprávění v Blenderu.
+            Střih v DaVinci Resolve.
+          </p>
+        </div>
+      </article>
 
-        <!-- Project: Cyberpunk Street -->
+      <!-- Second video -->
+      <div class="projects-grid projects-grid--single" id="projectsGrid">
+
         <article class="project-card" data-category="camera film" id="proj-cyberpunk">
           <div class="project-card__media">
-            <video class="project-card__video" poster="assets/screenshots/ss5.png" preload="none" muted loop playsinline>
+            <video class="project-card__video" poster="assets/screenshots/ss5.png" preload="none" muted loop
+              playsinline>
               <source src="assets/videos/cyberpunk-street.mp4" type="video/mp4" />
             </video>
             <div class="project-card__overlay">
               <button class="project-card__play" aria-label="Přehrát">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
               </button>
             </div>
           </div>
           <div class="project-card__info">
-            <span class="project-card__tag">3D Scéna · Kamera</span>
+            <span class="project-card__tag">3D Scéna · Kamera · Světlo</span>
             <h3 class="project-card__title">Cyberpunk Street with a Flying Robot</h3>
-            <p class="project-card__desc">Atmosferická 3D scéna s důrazem na světlo, kompozici záběru a pohyb kamery v Blenderu.</p>
+            <p class="project-card__desc">Atmosferická 3D scéna s důrazem na světlo, kompozici záběru a pohyb kamery v
+              Blenderu.</p>
           </div>
         </article>
 
-        <!-- Project: Bachelor Film – Screenshots -->
-        <article class="project-card project-card--gallery" data-category="film camera" id="proj-bachelor">
-          <div class="project-card__media project-card__media--gallery">
-            <div class="gallery-slider" id="gallerySlider">
-              <img src="assets/screenshots/ss1.png" alt="Bakalářský film – záběr 1" class="gallery-slide active" />
-              <img src="assets/screenshots/ss2.png" alt="Bakalářský film – záběr 2" class="gallery-slide" />
-              <img src="assets/screenshots/ss3.png" alt="Bakalářský film – záběr 3" class="gallery-slide" />
-              <img src="assets/screenshots/ss4.png" alt="Bakalářský film – záběr 4" class="gallery-slide" />
-              <img src="assets/screenshots/ss5.png" alt="Bakalářský film – záběr 5" class="gallery-slide" />
-              <img src="assets/screenshots/ss6.png" alt="Bakalářský film – záběr 6" class="gallery-slide" />
-              <img src="assets/screenshots/ss7.png" alt="Bakalářský film – záběr 7" class="gallery-slide" />
-            </div>
-            <div class="gallery-dots" id="galleryDots"></div>
-            <button class="gallery-arrow gallery-arrow--prev" id="galleryPrev" aria-label="Předchozí">&#8592;</button>
-            <button class="gallery-arrow gallery-arrow--next" id="galleryNext" aria-label="Další">&#8594;</button>
-          </div>
-          <div class="project-card__info">
-            <span class="project-card__tag">Bakalářský film · Blender · Rig</span>
-            <h3 class="project-card__title">Bakalářský film – Zákulisí</h3>
-            <p class="project-card__desc">Výběr ze zákulisí bakalářského animovaného filmu – charakter rig, scéna, kamera a animatik.</p>
-          </div>
-        </article>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== BEHIND THE SCENES ===== -->
+  <section class="bts" id="bts">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Zákulisí</h2>
+        <p class="section-sub">Pohled do procesu – rig, scéna, animatik a kamera z bakalářského filmu.</p>
+      </div>
+      <div class="bts-grid">
+        <img src="assets/screenshots/ss1.png" alt="Bakalářský film – záběr 1" class="bts-img" />
+        <img src="assets/screenshots/ss2.png" alt="Bakalářský film – záběr 2" class="bts-img" />
+        <img src="assets/screenshots/ss3.png" alt="Bakalářský film – záběr 3" class="bts-img" />
+        <img src="assets/screenshots/ss4.png" alt="Bakalářský film – záběr 4" class="bts-img" />
+        <img src="assets/screenshots/ss5.png" alt="Bakalářský film – záběr 5" class="bts-img" />
+        <img src="assets/screenshots/ss6.png" alt="Bakalářský film – záběr 6" class="bts-img" />
+        <img src="assets/screenshots/ss7.png" alt="Bakalářský film – záběr 7" class="bts-img" />
       </div>
     </div>
   </section>
@@ -158,10 +163,13 @@
           Jsem Samuel Moravec – 3D animátor, střihač a režisér animovaných filmů.
         </p>
         <p>
-          Pracuji v <strong>Blenderu</strong>, kde se věnuji 3D kameře, svícení, pohybu kamery a celkovému vizuálnímu vyprávění. Střih dělám jak v animaci, tak v reálu – v <strong>Premiere Pro</strong> a <strong>DaVinci Resolve</strong>.
+          Pracuji v <strong>Blenderu</strong>, kde se věnuji 3D kameře, svícení, pohybu kamery a celkovému vizuálnímu
+          vyprávění. Střih dělám jak v animaci, tak v reálu – v <strong>Premiere Pro</strong> a <strong>DaVinci
+            Resolve</strong>.
         </p>
         <p>
-          Jako režisér animovaných filmů propojuji všechny tyto disciplíny do jednoho celku. Zajímá mě především <em>vyprávění a kreativita</em> – každý záběr, každý střih, každé světlo slouží příběhu.
+          Jako režisér animovaných filmů propojuji všechny tyto disciplíny do jednoho celku. Zajímá mě především
+          <em>vyprávění a kreativita</em> – každý záběr, každý střih, každé světlo slouží příběhu.
         </p>
         <div class="about__skills-grid">
           <div class="about__skill">
@@ -230,4 +238,5 @@
 
   <script src="scripts/main.js"></script>
 </body>
+
 </html>
