@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Moravec – 3D Animator & Director</title>
+  <meta name="description" content="Portfolio Samuela Moravce – 3D animátor, kameraman, střihač a režisér animovaných filmů. Pracuje v Blenderu, Premiere Pro a DaVinci Resolve." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">SM</div>
+    <ul class="nav__links">
+      <li><a href="#work" class="nav__link">Práce</a></li>
+      <li><a href="#about" class="nav__link">O mně</a></li>
+      <li><a href="#contact" class="nav__link">Kontakt</a></li>
+    </ul>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grain"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">3D Animátor · Kameraman · Režisér</p>
+      <h1 class="hero__title">
+        Samuel<br />
+        <em>Moravec</em>
+      </h1>
+      <p class="hero__sub">
+        Vyprávím příběhy skrze obraz, pohyb kamery a střih.<br />
+        Každý záběr má svůj záměr.
+      </p>
+      <div class="hero__cta">
+        <a href="#work" class="btn btn--primary">Zobrazit práce</a>
+        <a href="#contact" class="btn btn--ghost">Kontakt</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS STRIP ===== -->
+  <section class="skills">
+    <div class="skills__inner">
+      <div class="skill-tag">Blender 3D</div>
+      <div class="skill-tag">3D Kamera &amp; Světlo</div>
+      <div class="skill-tag">Pohyb kamery</div>
+      <div class="skill-tag">Střih</div>
+      <div class="skill-tag">Premiere Pro</div>
+      <div class="skill-tag">DaVinci Resolve</div>
+      <div class="skill-tag">Animovaný film</div>
+      <div class="skill-tag">Vyprávění</div>
+    </div>
+  </section>
+
+  <!-- ===== WORK ===== -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Projekty</h2>
+        <p class="section-sub">Výběr z mé tvorby – od bakalářského filmu po osobní experimenty.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-filter="all">Vše</button>
+        <button class="filter-tab" data-filter="film">Film</button>
+        <button class="filter-tab" data-filter="camera">Kamera &amp; Světlo</button>
+        <button class="filter-tab" data-filter="edit">Střih</button>
+      </div>
+
+      <!-- Projects grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project: Forbidden Knowledge -->
+        <article class="project-card" data-category="film edit" id="proj-forbidden">
+          <div class="project-card__media">
+            <video class="project-card__video" poster="assets/screenshots/ss1.png" preload="none" muted loop playsinline>
+              <source src="assets/videos/forbidden-knowledge.mp4" type="video/mp4" />
+            </video>
+            <div class="project-card__overlay">
+              <button class="project-card__play" aria-label="Přehrát">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__tag">Animovaný film · Střih</span>
+            <h3 class="project-card__title">Forbidden Knowledge</h3>
+            <p class="project-card__desc">Krátký animovaný film – extended cut. Práce na kameře, světle, střihu a celkovém vyprávění.</p>
+          </div>
+        </article>
+
+        <!-- Project: Cyberpunk Street -->
+        <article class="project-card" data-category="camera film" id="proj-cyberpunk">
+          <div class="project-card__media">
+            <video class="project-card__video" poster="assets/screenshots/ss5.png" preload="none" muted loop playsinline>
+              <source src="assets/videos/cyberpunk-street.mp4" type="video/mp4" />
+            </video>
+            <div class="project-card__overlay">
+              <button class="project-card__play" aria-label="Přehrát">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__tag">3D Scéna · Kamera</span>
+            <h3 class="project-card__title">Cyberpunk Street with a Flying Robot</h3>
+            <p class="project-card__desc">Atmosferická 3D scéna s důrazem na světlo, kompozici záběru a pohyb kamery v Blenderu.</p>
+          </div>
+        </article>
+
+        <!-- Project: Bachelor Film – Screenshots -->
+        <article class="project-card project-card--gallery" data-category="film camera" id="proj-bachelor">
+          <div class="project-card__media project-card__media--gallery">
+            <div class="gallery-slider" id="gallerySlider">
+              <img src="assets/screenshots/ss1.png" alt="Bakalářský film – záběr 1" class="gallery-slide active" />
+              <img src="assets/screenshots/ss2.png" alt="Bakalářský film – záběr 2" class="gallery-slide" />
+              <img src="assets/screenshots/ss3.png" alt="Bakalářský film – záběr 3" class="gallery-slide" />
+              <img src="assets/screenshots/ss4.png" alt="Bakalářský film – záběr 4" class="gallery-slide" />
+              <img src="assets/screenshots/ss5.png" alt="Bakalářský film – záběr 5" class="gallery-slide" />
+              <img src="assets/screenshots/ss6.png" alt="Bakalářský film – záběr 6" class="gallery-slide" />
+              <img src="assets/screenshots/ss7.png" alt="Bakalářský film – záběr 7" class="gallery-slide" />
+            </div>
+            <div class="gallery-dots" id="galleryDots"></div>
+            <button class="gallery-arrow gallery-arrow--prev" id="galleryPrev" aria-label="Předchozí">&#8592;</button>
+            <button class="gallery-arrow gallery-arrow--next" id="galleryNext" aria-label="Další">&#8594;</button>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__tag">Bakalářský film · Blender · Rig</span>
+            <h3 class="project-card__title">Bakalářský film – Zákulisí</h3>
+            <p class="project-card__desc">Výběr ze zákulisí bakalářského animovaného filmu – charakter rig, scéna, kamera a animatik.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <h2 class="section-title">O mně</h2>
+        <p class="about__lead">
+          Jsem Samuel Moravec – 3D animátor, střihač a režisér animovaných filmů.
+        </p>
+        <p>
+          Pracuji v <strong>Blenderu</strong>, kde se věnuji 3D kameře, svícení, pohybu kamery a celkovému vizuálnímu vyprávění. Střih dělám jak v animaci, tak v reálu – v <strong>Premiere Pro</strong> a <strong>DaVinci Resolve</strong>.
+        </p>
+        <p>
+          Jako režisér animovaných filmů propojuji všechny tyto disciplíny do jednoho celku. Zajímá mě především <em>vyprávění a kreativita</em> – každý záběr, každý střih, každé světlo slouží příběhu.
+        </p>
+        <div class="about__skills-grid">
+          <div class="about__skill">
+            <div class="about__skill-icon">🎬</div>
+            <strong>Režie</strong>
+            <span>Animované filmy</span>
+          </div>
+          <div class="about__skill">
+            <div class="about__skill-icon">📷</div>
+            <strong>3D Kamera</strong>
+            <span>Blender, pohyb, světlo</span>
+          </div>
+          <div class="about__skill">
+            <div class="about__skill-icon">✂️</div>
+            <strong>Střih</strong>
+            <span>Premiere Pro, DaVinci</span>
+          </div>
+          <div class="about__skill">
+            <div class="about__skill-icon">💡</div>
+            <strong>Vyprávění</strong>
+            <span>Vizuální storytelling</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__visual">
+        <div class="about__frame">
+          <img src="assets/screenshots/ss5.png" alt="Samuel Moravec – práce v Blenderu" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="container contact__inner">
+      <h2 class="section-title">Kontakt</h2>
+      <p class="contact__sub">Máte zájem o spolupráci nebo chcete vidět více práce? Napište mi.</p>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Jméno</label>
+            <input type="text" id="name" name="name" placeholder="Vaše jméno" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="vas@email.cz" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Zpráva</label>
+          <textarea id="message" name="message" rows="5" placeholder="Váš vzkaz..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary" id="submitBtn">Odeslat zprávu</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">Samuel Moravec</span>
+      <p class="footer__copy">&copy; 2026 · 3D Animátor &amp; Režisér</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
